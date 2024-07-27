@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace Quiz_App
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class QuizForm : Form
     {
         // List to store all the questions in the quiz
@@ -38,8 +41,10 @@ namespace Quiz_App
             DisplayQuestion();
         }
 
-        // Load all the questions into the questions list
-        private void LoadQuestions()
+        /// <summary>
+        /// Load all the questions into the questions list
+        /// </summary>
+        public void LoadQuestions()
         {
             questions = new List<Question>
             {
@@ -86,8 +91,10 @@ namespace Quiz_App
             };
         }
 
-        // Display the current question and its options
-        private void DisplayQuestion()
+        /// <summary>
+        /// Display the current question and its options
+        /// </summary>
+        public void DisplayQuestion()
         {
             if (questionNumber < questions.Count)
             {
@@ -116,7 +123,7 @@ namespace Quiz_App
             }
         }
 
-        private void AnswerButton_Click(object sender, EventArgs e)
+        public void AnswerButton_Click(object sender, EventArgs e)
         {
             var senderObject = (Button)sender;
             selectedAnswer = Convert.ToInt32(senderObject.Tag);
@@ -132,8 +139,12 @@ namespace Quiz_App
             confirmButton.Enabled = true;
         }
 
-        // Event handler for the confirm button click event
-        private void ConfirmButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Event handler for the confirm button click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void ConfirmButton_Click(object sender, EventArgs e)
         {
             if (selectedAnswer == -1)
             {
@@ -163,8 +174,10 @@ namespace Quiz_App
             }
         }
 
-        // Display the final results of the quiz
-        private void DisplayResults()
+        /// <summary>
+        /// Display the final results of the quiz
+        /// </summary>
+        public void DisplayResults()
         {
             int percentage = (int)Math.Round((double)(score * 100) / totalQuestions);
             MessageBox.Show(
@@ -177,7 +190,9 @@ namespace Quiz_App
         }
     }
 
-    // Class representing a quiz question
+    /// <summary>
+    /// Class representing a quiz question
+    /// </summary>
     public class Question
     {
         public string Text { get; set; }
@@ -187,7 +202,9 @@ namespace Quiz_App
         public Image QuestionImage { get; set; }  // Property for the question image
     }
 
-    // Class representing a quiz
+    /// <summary>
+    /// Class representing a quiz
+    /// </summary>
     public class Quiz
     {
         public string Title { get; set; }

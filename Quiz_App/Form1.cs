@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace Quiz_App
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class Form1 : Form
     {
         public Form1()
