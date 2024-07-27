@@ -61,7 +61,7 @@ namespace Quiz_App
                     Text = "What is the remainder of 21 divided by 7?",
                     Options = new List<string> { "21", "7", "1", "None of these" },
                     CorrectAnswer = 3,
-                    Weight = 1,
+                    Weight = 2,
                     QuestionImage = Properties.Resources.Screenshot_2024_07_26_115250  // Image for question 2
                 },
                 new Question
@@ -77,7 +77,7 @@ namespace Quiz_App
                     Text = "If David age is 27 years old in 2011. What was his age in 2003?",
                     Options = new List<string> { "17 years", "37 years", "20 years", "19 years" },
                     CorrectAnswer = 3,
-                    Weight = 1,
+                    Weight = 3,
                     QuestionImage = Properties.Resources.Screenshot_2024_07_26_140232  // Image for question 2
                 },
                 new Question
